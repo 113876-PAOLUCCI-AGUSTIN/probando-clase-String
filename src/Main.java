@@ -27,5 +27,45 @@ public class Main {
         /* Esto es VERDADERO, E INDICA IGUALES PORQUE EQUALS COMPARA CONTENIDO DE LA MEMORIA!!!!!!!!
          * independientemente de si el objeto fue creado con "" o con NEW.
          */
+
+        // Probando diferentes métodos de un objeto de tipo String.
+        String citaSaramago = "Es una estupidez perder el presente solo por el miedo de no llegar a ganar el futuro. ";
+
+        System.out.println("----- LONGITUD -----");
+        System.out.println(citaSaramago.length());           // INT: Indica la LONGITUD. Obvio que incluye espacios.
+
+        System.out.println("----- CONTIENE -----");
+        System.out.println(citaSaramago.contains("miedo"));  // BOOLEAN: Indica si CONTIENE un character o cadena.
+
+        System.out.println("----- REPEAT -----");
+        System.out.println(citaSaramago.repeat(2));    // REPITE la cadena.
+
+        System.out.println("----- UPPER LOWER CASE -----");
+        String fraseCorta = "La vida es corta";
+        System.out.println(fraseCorta.toLowerCase());        // Convierte todos los caracteres a MINÚSCULAS.
+        System.out.println(fraseCorta.toUpperCase());        // Convierte todos los caracteres a MAYÚSCULAS.
+
+        System.out.println("----- TRIM -----");
+        fraseCorta = "       La vida es corta    ";
+        System.out.println(fraseCorta);
+        System.out.println(fraseCorta.trim());               // Quita espacios en blando delante y atrás.
+        fraseCorta = fraseCorta.trim();
+
+        System.out.println("----- CHARAT -----");
+        System.out.println(fraseCorta.charAt(5));            // Te devuelve que caracter esta en una det posición. Empieza en CERO.
+
+        System.out.println("----- GETCLASS -----");
+        System.out.println(fraseCorta.getClass());           // Como es un objeto permite ver de que clase viene.
+
+        System.out.println("----- INDEXOF -----");
+        System.out.println(fraseCorta.indexOf("es",1));
+
+        System.out.println("----- CONCAT -----");
+        String calle = "Chacabuco 550 ";
+        String ciudad = "Córdoba ";
+        String pais = "Argentina ";
+        String domicilioCompleto = calle.concat(ciudad).concat(pais);
+        System.out.println(domicilioCompleto);
+        System.out.println("------------------");
     }
 }
