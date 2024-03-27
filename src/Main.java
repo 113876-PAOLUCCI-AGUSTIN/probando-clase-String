@@ -1,3 +1,8 @@
+/*
+*  SOURCE: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html
+* tip Intellij Idea: CTRL+A abre link en navegador predeterminado.
+*/
+
 public class Main {
     public static void main(String[] args) {
         String s1 = "Hello World";
@@ -29,7 +34,7 @@ public class Main {
          */
 
         // Probando diferentes métodos de un objeto de tipo String.
-        String citaSaramago = "Es una estupidez perder el presente solo por el miedo de no llegar a ganar el futuro. ";
+        String citaSaramago = "Es una estupidez perder el presente solo por el miedo de no llegar a ganar el futuro. \n";
 
         System.out.println("----- LONGITUD -----");
         System.out.println(citaSaramago.length());           // INT: Indica la LONGITUD. Obvio que incluye espacios.
@@ -38,7 +43,7 @@ public class Main {
         System.out.println(citaSaramago.contains("miedo"));  // BOOLEAN: Indica si CONTIENE un character o cadena.
 
         System.out.println("----- REPEAT -----");
-        System.out.println(citaSaramago.repeat(2));    // REPITE la cadena.
+        System.out.println(citaSaramago.repeat(22));    // REPITE la cadena.
 
         System.out.println("----- UPPER LOWER CASE -----");
         String fraseCorta = "La vida es corta";
