@@ -7,7 +7,7 @@
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static <Char> void main(String[] args) {
         /*
          * Los objetos STRING en Java pueden ser creados de dos maneras:
          * String literal: se crean con comilla doble.
@@ -53,6 +53,45 @@ public class Main {
         // Probando diferentes métodos de un objeto de tipo String.
         String javaJoke = "Why do Java developers wear glasses? Because they can't C#.\n";
 
+
+        // TOP TEN METHODS.
+        // 1 - indexOf()
+        System.out.println("----- indexOf -----");
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println(javaJoke.indexOf("wear",0));     // Empieza en cero y llega lo encuentra en 23.
+        System.out.println(javaJoke.indexOf("clothes",0)); // devuelve -1 sino
+        System.out.println(" ");
+
+        // 2 - toCharArray()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- toCharArray -----");
+        char[] javaJokeArray = javaJoke.toCharArray();
+        for (int i = 0; i < javaJokeArray.length; i++) {
+            System.out.println(javaJokeArray[i]);
+        }
+
+        // 3 - charAt()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- carater en una posicion // charAt-----");
+        System.out.println(javaJoke.charAt(13));            // Te devuelve caracter de una det posición. Empieza en CERO
+        System.out.println(" ");
+
+        // 4 - charAt()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- CONCATENADOR // CONCAT -----");
+        String javaJoke01 = "Why do Java developers";
+        String javaJoke02 = " wear glasses? ";
+        String javaJoke03 = "Because they can't C#.\n";
+        String javaJokeCompleted = javaJoke01.concat(javaJoke02).concat(javaJoke03);
+        System.out.println(javaJokeCompleted);
+        System.out.println(" ");
+
+        // 5 - charAt()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+
+
+
+
         System.out.println("----- LONGITUD // LENGTH -----");
         System.out.println(javaJoke.length());           // INT: Indica la LONGITUD. Obvio que incluye espacios.
         System.out.println(" ");
@@ -84,9 +123,6 @@ public class Main {
         System.out.println(" ");
 
 
-        System.out.println("----- CARACTER EN POSICION // CHARAT -----");
-        System.out.println(javaJoke.charAt(7));            // Te devuelve caracter de una det posición. Empieza en CERO
-        System.out.println(" ");
 
 
         // Ex: "Why do Java developers wear glasses? Because they can't C#.\n"
@@ -108,5 +144,8 @@ public class Main {
         System.out.println(domicilioCompleto);
         System.out.println("---------------------------------");
         System.out.println(" ");
+
+        System.out.println("---------------------------------");
+
     }
 }
