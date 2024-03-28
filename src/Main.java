@@ -6,6 +6,9 @@
  */
 
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 public class Main {
     public static <Char> void main(String[] args) {
         /*
@@ -51,7 +54,7 @@ public class Main {
          */
 
         // Probando diferentes métodos de un objeto de tipo String.
-        String javaJoke = "Why do Java developers wear glasses? Because they can't C#.\n";
+        String javaJoke = "Why do Java developers wear glasses? Because they can't C#.";
 
 
         // TOP TEN METHODS.
@@ -86,10 +89,80 @@ public class Main {
         System.out.println(javaJokeCompleted);
         System.out.println(" ");
 
-        // 5 - charAt()
+        // 5 - replace()
         // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- reemplazar // replace -----");
+        System.out.println(javaJoke.replace('s','x')); // CUIDADO: CASE SENSITIVE!!!!!
+        System.out.println(javaJoke.replace('e','Z'));
+        System.out.println(javaJoke);
+        System.out.println(" ");
+
+        // 6 - substring()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- sacar subcadena // substring -----");
+        System.out.println(javaJoke.substring(7,35)); // IMPORTANTE endindex-1!!!!!!!
+        System.out.println(" ");
 
 
+        // 7 - split()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- dividir // split -----");
+        String[] arrayOfJavaJoke = javaJoke.split(" "); // arma un array a partir de partir una "EXPRESION REGULAR".
+        for (int i = 0; i < arrayOfJavaJoke.length; i++) {
+            System.out.println(arrayOfJavaJoke[i]);
+        }
+        System.out.println(arrayOfJavaJoke.length); // Podría contar la cantidad de palabras.
+        System.out.println(" ");
+
+        String fechaDeNacimiento = "02/09/1975";
+        String[] extraccionAnio = fechaDeNacimiento.split("02/09/"); // encuentra el patron y CORTA
+        System.out.println(extraccionAnio[1]); // armando un array de X partes.
+        System.out.println(" ");
+
+
+        // 8 - compareTo()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- comparar con // compareTo -----");
+        javaJoke.compareTo("Java");
+
+
+        // 9 - strip()
+        // e.g.: javaJoke "Why do Java developers wear glasses? Because they can't C#.\n"
+        System.out.println("----- comparar con // compareTo -----");
+
+        // 10 - valueOf
+        // contains /isEmpty / join / repeat /starsWith/tolower to upper/indent
+
+        String javaJoke2 = "Why do Java developers wear glasses? Because they can't C#.";
+        char[] jJCA = javaJoke2.toCharArray();
+
+        for (int i = 0; i < jJCA.length; i++) {
+            System.out.println(jJCA[i]);
+
+        }
+        for (int i = jJCA.length - 1; i >= 0; i--) {
+            System.out.print(jJCA[i]);
+        }
+
+        String name = "Agustin";
+        char[] agustinArray = name.toCharArray();
+        for (int i = 0; i < agustinArray.length; i++) {
+            char c = agustinArray[i];
+            System.out.print(c+" ");
+        }
+        for (int i = agustinArray.length - 1; i >= 0; i--) {
+            char c = agustinArray[i];
+            System.out.print(c+" ");
+        }
+
+        // CTRL+J fori FOR // itar FOR de un array
+       /*
+       * iter    Iterate (for each..in)
+         itin    Iterate (for..in)
+         itli    Iterate over a List
+         //itar    Iterate elements of array
+         //ritar   Iterate elements of array in reverse order
+         * */
 
 
         System.out.println("----- LONGITUD // LENGTH -----");
@@ -144,8 +217,5 @@ public class Main {
         System.out.println(domicilioCompleto);
         System.out.println("---------------------------------");
         System.out.println(" ");
-
-        System.out.println("---------------------------------");
-
     }
 }
