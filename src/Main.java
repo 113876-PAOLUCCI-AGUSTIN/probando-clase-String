@@ -5,8 +5,6 @@
  *                https://www.linkedin.com/pulse/java-strings-string-pool-muhammad-noman
  */
 
-
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class Main {
